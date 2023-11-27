@@ -11,3 +11,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.maindiv{
+  justify-content: center;
+  margin-left: auto;
+}
+.maintable td{
+  border: 1px solid gray;
+}
+.maintable thead{
+  background-color: aqua;
+}
+
+.maintable td{
+  padding: 1rem;
+}

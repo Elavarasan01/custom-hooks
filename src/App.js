@@ -1,25 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import { ContextDemo } from './components/contextusage';
+import { createContext } from 'react';
+import { RefUsage } from './components/refusage';
+import { ReducerUsage } from './components/reducerusage';
+import { MemoUsage } from './components/memousage';
+import { CallbackUsage } from './components/callbackusage';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import { CustomHooks } from './components/customhooks';
+
+const data=createContext();
 
 function App() {
+  const userDetails={
+    userName:"Elavarasan",
+    userNumber:"82220102003"
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>  
+    {/* <data.Provider value={userDetails}>
+     
+      <ContextDemo/>
+     <hr/>
+     <RefUsage/>
+     <hr/>
+     <ReducerUsage/>
+     <hr/>
+     <MemoUsage/>
+     <hr/>
+     <CallbackUsage/>
+    
+    </data.Provider> */}
+    <CustomHooks/>
+    </>
   );
 }
 
 export default App;
+
+export {data};
